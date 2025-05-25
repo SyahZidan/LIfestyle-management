@@ -1,0 +1,372 @@
+/* Responsive Styles */
+
+/* Tablet Styles (768px - 991px) */
+@media (max-width: 991px) {
+  .sidebar {
+    width: 240px;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-card {
+    padding: 1.25rem;
+  }
+  
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .stat-info h3 {
+    font-size: 1.5rem;
+  }
+  
+  .diary-entries {
+    grid-template-columns: 1fr;
+  }
+  
+  .calendar-day {
+    font-size: 0.85rem;
+  }
+  
+  .circular-progress.large {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-picture-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .current-picture {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Mobile Styles (up to 767px) */
+@media (max-width: 767px) {
+  .app-container {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    height: 100%;
+    z-index: 1050;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.show {
+    left: 0;
+  }
+  
+  .mobile-header {
+    display: flex;
+  }
+  
+  .content {
+    padding: 1rem;
+    margin-top: 0;
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .diary-controls, .agenda-controls, .finance-overview-section, .health-overview {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .diary-filters {
+    width: 100%;
+  }
+  
+  .calendar-navigation {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .calendar-day span {
+    font-size: 0.75rem;
+  }
+  
+  .event-dot {
+    width: 6px;
+    height: 6px;
+    bottom: 4px;
+  }
+  
+  .event-item {
+    flex-wrap: wrap;
+  }
+  
+  .event-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  
+  .balance-card, .monthly-summary {
+    margin-bottom: 1.5rem;
+  }
+  
+  .summary-stats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .summary-stat {
+    width: 48%;
+  }
+  
+  .activity-stats {
+    flex-wrap: wrap;
+  }
+  
+  .activity-stat {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .settings-sidebar {
+    margin-bottom: 1.5rem;
+  }
+  
+  .settings-content {
+    padding: 1.5rem;
+  }
+  
+  .personal-info-form .row {
+    margin-bottom: 0;
+  }
+  
+  .theme-options, .color-options {
+    flex-wrap: wrap;
+  }
+  
+  .floating-action-button {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Small Mobile Styles (up to 576px) */
+@media (max-width: 576px) {
+  .diary-entries {
+    grid-template-columns: 1fr;
+  }
+  
+  .entry-images {
+    flex-direction: column;
+  }
+  
+  .entry-images img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-item {
+    padding: 1rem;
+  }
+  
+  .event-date {
+    min-width: 50px;
+  }
+  
+  .entry-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .entry-tags {
+    flex-wrap: wrap;
+  }
+  
+  .entry-actions {
+    align-self: flex-end;
+  }
+  
+  .transactions-table th, .transactions-table td {
+    padding: 0.5rem;
+  }
+  
+  .category-badge {
+    padding: 0.1rem 0.5rem;
+  }
+  
+  .circular-progress.large {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circular-progress.large .inner {
+    font-size: 1.25rem;
+  }
+  
+  .profile-settings-form {
+    padding: 0;
+  }
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.dark-mode .content {
+  background-color: var(--dark);
+}
+
+.dark-mode .page-title {
+  color: var(--light);
+}
+
+.dark-mode .page-subtitle {
+  color: var(--light-medium);
+}
+
+.dark-mode .widget, 
+.dark-mode .stat-card, 
+.dark-mode .diary-entry-card, 
+.dark-mode .event-item, 
+.dark-mode .budget-card, 
+.dark-mode .expense-distribution, 
+.dark-mode .recent-transactions, 
+.dark-mode .health-stat-card, 
+.dark-mode .health-metrics, 
+.dark-mode .weekly-summary, 
+.dark-mode .recent-activities, 
+.dark-mode .calories-card, 
+.dark-mode .meals-log, 
+.dark-mode .settings-container {
+  background-color: var(--dark-medium);
+  box-shadow: var(--shadow);
+}
+
+.dark-mode .mobile-header {
+  border-bottom-color: var(--dark-light);
+}
+
+.dark-mode .diary-entry, 
+.dark-mode .event, 
+.dark-mode .category-item, 
+.dark-mode .activity-item, 
+.dark-mode .activity-list-item, 
+.dark-mode .meal-item {
+  border-bottom-color: var(--dark-light);
+}
+
+.dark-mode .calendar-day {
+  color: var(--light);
+}
+
+.dark-mode .calendar-day.inactive {
+  color: var(--text-light);
+}
+
+.dark-mode .calendar-day:hover {
+  background-color: var(--dark-light);
+}
+
+.dark-mode .entry-header, 
+.dark-mode .settings-sidebar {
+  background-color: var(--dark-light);
+}
+
+.dark-mode .entry-footer {
+  border-top-color: var(--dark-light);
+}
+
+.dark-mode .tag {
+  background-color: var(--dark-light);
+  color: var(--light-medium);
+}
+
+.dark-mode .settings-section h4 {
+  border-bottom-color: var(--dark-light);
+}
+
+.dark-mode .progress-ring::after,
+.dark-mode .chart-center {
+  background-color: var(--dark-medium);
+}
+
+.dark-mode .metric-card {
+  background-color: var(--dark-light);
+}
+
+.dark-mode .settings-nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background-color: var(--dark-light);
+  border-color: var(--dark-light);
+  color: var(--light);
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus {
+  background-color: var(--dark-light);
+  color: var(--light);
+}
+
+.dark-mode .input-group-text {
+  background-color: var(--dark-light);
+  border-color: var(--dark-light);
+  color: var(--light-medium);
+}
+
+.dark-mode .form-check-input {
+  background-color: var(--dark-light);
+  border-color: var(--light-medium);
+}
+
+.dark-mode .table {
+  color: var(--light);
+}
+
+.dark-mode .table th {
+  border-color: var(--dark-light);
+}
+
+.dark-mode .table td {
+  border-color: var(--dark-light);
+}

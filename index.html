@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSync - Your Lifestyle Companion</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h3><i class="bi bi-lightning-charge-fill"></i> LifeSync</h3>
+        <button id="sidebar-toggle-btn" class="d-block d-md-none"><i class="bi bi-list"></i></button>
+      </div>
+      <div class="sidebar-profile">
+        <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profile" class="profile-img">
+        <h4>Alex Johnson</h4>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active" data-page="dashboard"><i class="bi bi-grid-1x2-fill"></i> Dashboard</li>
+        <li data-page="diary"><i class="bi bi-journal-richtext"></i> Diary</li>
+        <li data-page="agenda"><i class="bi bi-calendar3"></i> Agenda</li>
+        <li data-page="finance"><i class="bi bi-wallet2"></i> Finance</li>
+        <li data-page="health"><i class="bi bi-heart-pulse-fill"></i> Health</li>
+        <li data-page="settings"><i class="bi bi-gear"></i> Settings</li>
+      </ul>
+      <div class="theme-toggle">
+        <span><i class="bi bi-sun-fill"></i></span>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="themeSwitch">
+        </div>
+        <span><i class="bi bi-moon-fill"></i></span>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="content" class="content">
+      <!-- Mobile Header -->
+      <div class="mobile-header d-md-none">
+        <button id="mobile-sidebar-toggle"><i class="bi bi-list"></i></button>
+        <h3>LifeSync</h3>
+        <div class="mobile-profile">
+          <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profile">
+        </div>
+      </div>
+
+      <!-- Pages Container -->
+      <div id="pages-container">
+        <!-- Dashboard Page -->
+        <div id="dashboard" class="page active">
+          <h2 class="page-title">Dashboard</h2>
+          <p class="page-subtitle">Welcome back, Alex! Here's your lifestyle overview.</p>
+          
+          <div class="dashboard-stats">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="bi bi-journal-check"></i></div>
+              <div class="stat-info">
+                <h3>3</h3>
+                <p>Diary entries this week</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="bi bi-calendar-check"></i></div>
+              <div class="stat-info">
+                <h3>5</h3>
+                <p>Upcoming events</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="bi bi-piggy-bank"></i></div>
+              <div class="stat-info">
+                <h3>68%</h3>
+                <p>Budget remaining</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="bi bi-activity"></i></div>
+              <div class="stat-info">
+                <h3>82%</h3>
+                <p>Health goals</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row dashboard-widgets">
+            <div class="col-md-6">
+              <div class="widget">
+                <div class="widget-header">
+                  <h4><i class="bi bi-journal-richtext"></i> Recent Diary</h4>
+                  <a href="#" class="view-all" data-page="diary">View All</a>
+                </div>
+                <div class="recent-diary">
+                  <div class="diary-entry">
+                    <div class="diary-date">
+                      <span class="day">24</span>
+                      <span class="month">MAY</span>
+                    </div>
+                    <div class="diary-content">
+                      <h5>Amazing Day at the Beach</h5>
+                      <p>Went to the beach with friends, had an amazing time watching the sunset...</p>
+                    </div>
+                  </div>
+                  <div class="diary-entry">
+                    <div class="diary-date">
+                      <span class="day">22</span>
+                      <span class="month">MAY</span>
+                    </div>
+                    <div class="diary-content">
+                      <h5>New Project at Work</h5>
+                      <p>Started a new project today, feeling excited about the challenges ahead...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="widget">
+                <div class="widget-header">
+                  <h4><i class="bi bi-calendar3"></i> Upcoming Events</h4>
+                  <a href="#" class="view-all" data-page="agenda">View All</a>
+                </div>
+                <div class="upcoming-events">
+                  <div class="event">
+                    <div class="event-time">
+                      <span class="date">MAY 26</span>
+                      <span class="time">10:00 AM</span>
+                    </div>
+                    <div class="event-info">
+                      <h5>Team Meeting</h5>
+                      <p><i class="bi bi-geo-alt"></i> Conference Room</p>
+                    </div>
+                  </div>
+                  <div class="event">
+                    <div class="event-time">
+                      <span class="date">MAY 28</span>
+                      <span class="time">7:30 PM</span>
+                    </div>
+                    <div class="event-info">
+                      <h5>Dinner with Sarah</h5>
+                      <p><i class="bi bi-geo-alt"></i> Italian Restaurant</p>
+                    </div>
+                  </div>
+                  <div class="event">
+                    <div class="event-time">
+                      <span class="date">MAY 30</span>
+                      <span class="time">2:00 PM</span>
+                    </div>
+                    <div class="event-info">
+                      <h5>Gym Session</h5>
+                      <p><i class="bi bi-geo-alt"></i> FitLife Gym</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row dashboard-widgets">
+            <div class="col-md-6">
+              <div class="widget">
+                <div class="widget-header">
+                  <h4><i class="bi bi-wallet2"></i> Financial Overview</h4>
+                  <a href="#" class="view-all" data-page="finance">View All</a>
+                </div>
+                <div class="finance-overview">
+                  <div class="budget-progress">
+                    <div class="d-flex justify-content-between">
+                      <span>Monthly Budget</span>
+                      <span>$820 / $1,200</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 68%;" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">68%</div>
+                    </div>
+                  </div>
+                  <div class="expense-categories">
+                    <div class="expense-category">
+                      <div class="category-info">
+                        <span class="category-name"><i class="bi bi-house-door"></i> Housing</span>
+                        <span class="category-amount">$400</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <div class="expense-category">
+                      <div class="category-info">
+                        <span class="category-name"><i class="bi bi-cart"></i> Groceries</span>
+                        <span class="category-amount">$180</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 18%;" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <div class="expense-category">
+                      <div class="category-info">
+                        <span class="category-name"><i class="bi bi-cup-hot"></i> Dining</span>
+                        <span class="category-amount">$120</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 12%;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="widget">
+                <div class="widget-header">
+                  <h4><i class="bi bi-heart-pulse-fill"></i> Health Stats</h4>
+                  <a href="#" class="view-all" data-page="health">View All</a>
+                </div>
+                <div class="health-stats">
+                  <div class="health-stat-row">
+                    <div class="health-stat">
+                      <div class="circular-progress" data-value="82">
+                        <div class="inner">82%</div>
+                      </div>
+                      <p>Overall Health</p>
+                    </div>
+                    <div class="health-stat">
+                      <div class="circular-progress" data-value="75">
+                        <div class="inner">75%</div>
+                      </div>
+                      <p>Activity</p>
+                    </div>
+                    <div class="health-stat">
+                      <div class="circular-progress" data-value="90">
+                        <div class="inner">90%</div>
+                      </div>
+                      <p>Sleep</p>
+                    </div>
+                  </div>
+                  <div class="health-activity">
+                    <h5>Today's Activity</h5>
+                    <div class="activity-item">
+                      <i class="bi bi-stopwatch"></i>
+                      <div class="activity-info">
+                        <p class="activity-title">Morning Run</p>
+                        <p class="activity-meta">30 minutes, 5 km</p>
+                      </div>
+                    </div>
+                    <div class="activity-item">
+                      <i class="bi bi-bicycle"></i>
+                      <div class="activity-info">
+                        <p class="activity-title">Evening Cycling</p>
+                        <p class="activity-meta">45 minutes, 12 km</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diary Page -->
+        <div id="diary" class="page">
+          <h2 class="page-title">My Diary</h2>
+          <p class="page-subtitle">Capture your thoughts, experiences, and emotions.</p>
+          
+          <div class="diary-controls">
+            <button class="btn btn-primary new-entry-btn"><i class="bi bi-plus-lg"></i> New Entry</button>
+            <div class="diary-filters">
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search entries...">
+              </div>
+              <select class="form-select">
+                <option>All Time</option>
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>Last Month</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="diary-entries">
+            <div class="diary-entry-card">
+              <div class="entry-header">
+                <div class="entry-date">
+                  <span class="day">24</span>
+                  <span class="month-year">May 2023</span>
+                </div>
+                <div class="entry-mood happy">
+                  <i class="bi bi-emoji-smile-fill"></i>
+                  <span>Happy</span>
+                </div>
+              </div>
+              <div class="entry-content">
+                <h4>Amazing Day at the Beach</h4>
+                <p>Went to the beach with friends today. The weather was perfect - sunny with a light breeze. We played volleyball, swam in the ocean, and had a picnic. Watching the sunset over the water was the perfect end to a fantastic day.</p>
+                <div class="entry-images">
+                  <img src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Beach">
+                  <img src="https://images.pexels.com/photos/1051073/pexels-photo-1051073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sunset">
+                </div>
+              </div>
+              <div class="entry-footer">
+                <div class="entry-tags">
+                  <span class="tag">Friends</span>
+                  <span class="tag">Beach</span>
+                  <span class="tag">Weekend</span>
+                </div>
+                <div class="entry-actions">
+                  <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="diary-entry-card">
+              <div class="entry-header">
+                <div class="entry-date">
+                  <span class="day">22</span>
+                  <span class="month-year">May 2023</span>
+                </div>
+                <div class="entry-mood neutral">
+                  <i class="bi bi-emoji-neutral-fill"></i>
+                  <span>Neutral</span>
+                </div>
+              </div>
+              <div class="entry-content">
+                <h4>New Project at Work</h4>
+                <p>Started a new project at work today. The scope seems challenging, but I'm excited about the opportunity to learn new skills. Met with the team to discuss initial requirements and set up our project management tools. Looking forward to diving deeper tomorrow.</p>
+              </div>
+              <div class="entry-footer">
+                <div class="entry-tags">
+                  <span class="tag">Work</span>
+                  <span class="tag">Project</span>
+                </div>
+                <div class="entry-actions">
+                  <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="diary-entry-card">
+              <div class="entry-header">
+                <div class="entry-date">
+                  <span class="day">20</span>
+                  <span class="month-year">May 2023</span>
+                </div>
+                <div class="entry-mood excited">
+                  <i class="bi bi-emoji-laughing-fill"></i>
+                  <span>Excited</span>
+                </div>
+              </div>
+              <div class="entry-content">
+                <h4>Concert Night</h4>
+                <p>Attended the concert I've been looking forward to for months! The energy in the venue was incredible, and the band exceeded all my expectations. Met up with Jamie and Chris before the show, and we had a great time catching up. The acoustic version of my favorite song was the highlight of the night.</p>
+                <div class="entry-images">
+                  <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Concert">
+                </div>
+              </div>
+              <div class="entry-footer">
+                <div class="entry-tags">
+                  <span class="tag">Music</span>
+                  <span class="tag">Friends</span>
+                  <span class="tag">Concert</span>
+                </div>
+                <div class="entry-actions">
+                  <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agenda Page -->
+        <div id="agenda" class="page">
+          <h2 class="page-title">My Agenda</h2>
+          <p class="page-subtitle">Plan your schedule and never miss important events.</p>
+          
+          <div class="agenda-controls">
+            <div class="calendar-navigation">
+              <button class="btn btn-outline-secondary"><i class="bi bi-chevron-left"></i></button>
+              <h3 class="current-month">May 2023</h3>
+              <button class="btn btn-outline-secondary"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <button class="btn btn-primary new-event-btn"><i class="bi bi-plus-lg"></i> New Event</button>
+          </div>
+
+          <div class="calendar-view">
+            <div class="calendar-header">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="calendar-body">
+              <div class="calendar-day inactive"><span>30</span></div>
+              <div class="calendar-day inactive"><span>1</span></div>
+              <div class="calendar-day"><span>2</span></div>
+              <div class="calendar-day"><span>3</span></div>
+              <div class="calendar-day"><span>4</span></div>
+              <div class="calendar-day"><span>5</span></div>
+              <div class="calendar-day weekend"><span>6</span></div>
+              <div class="calendar-day weekend"><span>7</span></div>
+              <div class="calendar-day"><span>8</span></div>
+              <div class="calendar-day"><span>9</span></div>
+              <div class="calendar-day"><span>10</span></div>
+              <div class="calendar-day"><span>11</span></div>
+              <div class="calendar-day"><span>12</span></div>
+              <div class="calendar-day weekend"><span>13</span></div>
+              <div class="calendar-day weekend"><span>14</span></div>
+              <div class="calendar-day"><span>15</span></div>
+              <div class="calendar-day"><span>16</span></div>
+              <div class="calendar-day"><span>17</span></div>
+              <div class="calendar-day"><span>18</span></div>
+              <div class="calendar-day"><span>19</span></div>
+              <div class="calendar-day weekend"><span>20</span>
+                <div class="event-dot music"></div>
+              </div>
+              <div class="calendar-day weekend"><span>21</span></div>
+              <div class="calendar-day"><span>22</span>
+                <div class="event-dot work"></div>
+              </div>
+              <div class="calendar-day"><span>23</span></div>
+              <div class="calendar-day"><span>24</span>
+                <div class="event-dot personal"></div>
+              </div>
+              <div class="calendar-day today"><span>25</span></div>
+              <div class="calendar-day"><span>26</span>
+                <div class="event-dot work"></div>
+              </div>
+              <div class="calendar-day weekend"><span>27</span></div>
+              <div class="calendar-day weekend"><span>28</span>
+                <div class="event-dot social"></div>
+              </div>
+              <div class="calendar-day"><span>29</span></div>
+              <div class="calendar-day"><span>30</span>
+                <div class="event-dot health"></div>
+              </div>
+              <div class="calendar-day"><span>31</span></div>
+              <div class="calendar-day inactive"><span>1</span></div>
+              <div class="calendar-day inactive"><span>2</span></div>
+              <div class="calendar-day inactive"><span>3</span></div>
+            </div>
+          </div>
+
+          <div class="upcoming-events-section">
+            <h4>Upcoming Events</h4>
+            <div class="events-list">
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">26</span>
+                  <span class="event-month">MAY</span>
+                </div>
+                <div class="event-category work"></div>
+                <div class="event-details">
+                  <h5>Team Meeting</h5>
+                  <p class="event-time"><i class="bi bi-clock"></i> 10:00 AM - 11:30 AM</p>
+                  <p class="event-location"><i class="bi bi-geo-alt"></i> Conference Room</p>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">28</span>
+                  <span class="event-month">MAY</span>
+                </div>
+                <div class="event-category social"></div>
+                <div class="event-details">
+                  <h5>Dinner with Sarah</h5>
+                  <p class="event-time"><i class="bi bi-clock"></i> 7:30 PM - 9:30 PM</p>
+                  <p class="event-location"><i class="bi bi-geo-alt"></i> Italian Restaurant</p>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">30</span>
+                  <span class="event-month">MAY</span>
+                </div>
+                <div class="event-category health"></div>
+                <div class="event-details">
+                  <h5>Gym Session</h5>
+                  <p class="event-time"><i class="bi bi-clock"></i> 2:00 PM - 3:30 PM</p>
+                  <p class="event-location"><i class="bi bi-geo-alt"></i> FitLife Gym</p>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">2</span>
+                  <span class="event-month">JUN</span>
+                </div>
+                <div class="event-category personal"></div>
+                <div class="event-details">
+                  <h5>Doctor's Appointment</h5>
+                  <p class="event-time"><i class="bi bi-clock"></i> 9:00 AM - 10:00 AM</p>
+                  <p class="event-location"><i class="bi bi-geo-alt"></i> City Medical Center</p>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="event-day">5</span>
+                  <span class="event-month">JUN</span>
+                </div>
+                <div class="event-category work"></div>
+                <div class="event-details">
+                  <h5>Project Deadline</h5>
+                  <p class="event-time"><i class="bi bi-clock"></i> All Day</p>
+                  <p class="event-location"><i class="bi bi-geo-alt"></i> Office</p>
+                </div>
+                <div class="event-actions">
+                  <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Finance Page -->
+        <div id="finance" class="page">
+          <h2 class="page-title">My Finances</h2>
+          <p class="page-subtitle">Track your expenses and manage your budget.</p>
+          
+          <div class="finance-overview-section">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="balance-card">
+                  <div class="balance-info">
+                    <h4>Current Balance</h4>
+                    <h2>$2,450.75</h2>
+                    <p>Updated: May 25, 2023</p>
+                  </div>
+                  <div class="balance-actions">
+                    <button class="btn btn-success"><i class="bi bi-plus-lg"></i> Income</button>
+                    <button class="btn btn-danger"><i class="bi bi-dash-lg"></i> Expense</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="monthly-summary">
+                  <h4>Monthly Summary</h4>
+                  <div class="summary-stats">
+                    <div class="summary-stat">
+                      <p class="stat-label">Income</p>
+                      <p class="stat-value income">$3,200.00</p>
+                    </div>
+                    <div class="summary-stat">
+                      <p class="stat-label">Expenses</p>
+                      <p class="stat-value expenses">$820.00</p>
+                    </div>
+                    <div class="summary-stat">
+                      <p class="stat-label">Savings</p>
+                      <p class="stat-value savings">$2,380.00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="budget-section">
+            <h4>Budget Overview</h4>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="budget-card">
+                  <h5>Monthly Budget: $1,200.00</h5>
+                  <div class="budget-progress-container">
+                    <div class="d-flex justify-content-between">
+                      <span>Spent: $820.00</span>
+                      <span>Remaining: $380.00</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 68%;" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">68%</div>
+                    </div>
+                  </div>
+                  
+                  <div class="budget-categories">
+                    <div class="category-item">
+                      <div class="category-info">
+                        <div class="category-icon housing"><i class="bi bi-house-door"></i></div>
+                        <div class="category-details">
+                          <h6>Housing</h6>
+                          <div class="category-progress">
+                            <div class="progress">
+                              <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>$400 / $500</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="category-item">
+                      <div class="category-info">
+                        <div class="category-icon groceries"><i class="bi bi-cart"></i></div>
+                        <div class="category-details">
+                          <h6>Groceries</h6>
+                          <div class="category-progress">
+                            <div class="progress">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>$180 / $300</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="category-item">
+                      <div class="category-info">
+                        <div class="category-icon dining"><i class="bi bi-cup-hot"></i></div>
+                        <div class="category-details">
+                          <h6>Dining</h6>
+                          <div class="category-progress">
+                            <div class="progress">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>$120 / $150</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="category-item">
+                      <div class="category-info">
+                        <div class="category-icon entertainment"><i class="bi bi-film"></i></div>
+                        <div class="category-details">
+                          <h6>Entertainment</h6>
+                          <div class="category-progress">
+                            <div class="progress">
+                              <div class="progress-bar bg-danger" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>$60 / $150</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="category-item">
+                      <div class="category-info">
+                        <div class="category-icon transportation"><i class="bi bi-car-front"></i></div>
+                        <div class="category-details">
+                          <h6>Transportation</h6>
+                          <div class="category-progress">
+                            <div class="progress">
+                              <div class="progress-bar bg-info" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>$60 / $100</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="expense-distribution">
+                  <h5>Expense Distribution</h5>
+                  <div class="donut-chart-container">
+                    <div class="donut-chart">
+                      <div class="segment segment-1"></div>
+                      <div class="segment segment-2"></div>
+                      <div class="segment segment-3"></div>
+                      <div class="segment segment-4"></div>
+                      <div class="segment segment-5"></div>
+                      <div class="chart-center"></div>
+                    </div>
+                  </div>
+                  <div class="chart-legend">
+                    <div class="legend-item">
+                      <span class="legend-color housing"></span>
+                      <span>Housing (49%)</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color groceries"></span>
+                      <span>Groceries (22%)</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color dining"></span>
+                      <span>Dining (15%)</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color entertainment"></span>
+                      <span>Entertainment (7%)</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-color transportation"></span>
+                      <span>Transportation (7%)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recent-transactions">
+            <div class="transactions-header">
+              <h4>Recent Transactions</h4>
+              <div class="transactions-actions">
+                <button class="btn btn-outline-primary"><i class="bi bi-filter"></i> Filter</button>
+                <button class="btn btn-outline-secondary"><i class="bi bi-download"></i> Export</button>
+              </div>
+            </div>
+            <div class="transactions-table-container">
+              <table class="table transactions-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>May 24, 2023</td>
+                    <td>Grocery Store</td>
+                    <td><span class="category-badge groceries">Groceries</span></td>
+                    <td class="expense">-$65.75</td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>May 23, 2023</td>
+                    <td>Monthly Salary</td>
+                    <td><span class="category-badge income">Income</span></td>
+                    <td class="income">+$3,200.00</td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>May 22, 2023</td>
+                    <td>Restaurant Dinner</td>
+                    <td><span class="category-badge dining">Dining</span></td>
+                    <td class="expense">-$42.50</td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>May 20, 2023</td>
+                    <td>Concert Tickets</td>
+                    <td><span class="category-badge entertainment">Entertainment</span></td>
+                    <td class="expense">-$60.00</td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>May 18, 2023</td>
+                    <td>Gas Station</td>
+                    <td><span class="category-badge transportation">Transportation</span></td>
+                    <td class="expense">-$35.25</td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="transactions-pagination">
+              <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-left"></i></button>
+              <span>Page 1 of 5</span>
+              <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Health Page -->
+        <div id="health" class="page">
+          <h2 class="page-title">My Health</h2>
+          <p class="page-subtitle">Track your fitness progress and wellness habits.</p>
+          
+          <div class="health-overview">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="health-stat-card">
+                  <div class="health-stat-header">
+                    <h4>Overall Wellness</h4>
+                    <div class="badge bg-success">Good</div>
+                  </div>
+                  <div class="health-stat-value">
+                    <div class="circular-progress large" data-value="82">
+                      <div class="inner">82%</div>
+                    </div>
+                  </div>
+                  <div class="health-stat-footer">
+                    <p>Based on your activity, sleep, and nutrition.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="health-metrics">
+                  <div class="row">
+                    <div class="col-6 col-md-3">
+                      <div class="metric-card">
+                        <div class="metric-icon activity"><i class="bi bi-activity"></i></div>
+                        <div class="metric-info">
+                          <h5>Activity</h5>
+                          <p>75%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="metric-card">
+                        <div class="metric-icon sleep"><i class="bi bi-moon-stars"></i></div>
+                        <div class="metric-info">
+                          <h5>Sleep</h5>
+                          <p>90%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="metric-card">
+                        <div class="metric-icon nutrition"><i class="bi bi-apple"></i></div>
+                        <div class="metric-info">
+                          <h5>Nutrition</h5>
+                          <p>68%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="metric-card">
+                        <div class="metric-icon hydration"><i class="bi bi-droplet"></i></div>
+                        <div class="metric-info">
+                          <h5>Hydration</h5>
+                          <p>85%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-6">
+                      <div class="health-goals">
+                        <h5>Daily Goals</h5>
+                        <div class="goal-item">
+                          <div class="goal-info">
+                            <i class="bi bi-footprints"></i>
+                            <div class="goal-details">
+                              <p class="goal-title">Steps</p>
+                              <div class="goal-progress">
+                                <div class="progress">
+                                  <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>8,245 / 10,000</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="goal-item">
+                          <div class="goal-info">
+                            <i class="bi bi-droplet"></i>
+                            <div class="goal-details">
+                              <p class="goal-title">Water</p>
+                              <div class="goal-progress">
+                                <div class="progress">
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>1.7 / 2 Liters</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="goal-item">
+                          <div class="goal-info">
+                            <i class="bi bi-clock"></i>
+                            <div class="goal-details">
+                              <p class="goal-title">Exercise</p>
+                              <div class="goal-progress">
+                                <div class="progress">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>45 / 60 Minutes</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="sleep-summary">
+                        <h5>Sleep Summary</h5>
+                        <div class="sleep-chart">
+                          <div class="sleep-bars">
+                            <div class="sleep-day">
+                              <p>Mon</p>
+                              <div class="sleep-bar" style="height: 70%"></div>
+                              <p>7h</p>
+                            </div>
+                            <div class="sleep-day">
+                              <p>Tue</p>
+                              <div class="sleep-bar" style="height: 80%"></div>
+                              <p>8h</p>
+                            </div>
+                            <div class="sleep-day">
+                              <p>Wed</p>
+                              <div class="sleep-bar" style="height: 60%"></div>
+                              <p>6h</p>
+                            </div>
+                            <div class="sleep-day">
+                              <p>Thu</p>
+                              <div class="sleep-bar" style="height: 90%"></div>
+                              <p>9h</p>
+                            </div>
+                            <div class="sleep-day">
+                              <p>Fri</p>
+                              <div class="sleep-bar" style="height: 75%"></div>
+                              <p>7.5h</p>
+                            </div>
+                            <div class="sleep-day">
+                              <p>Sat</p>
+                              <div class="sleep-bar" style="height: 85%"></div>
+                              <p>8.5h</p>
+                            </div>
+                            <div class="sleep-day">
+                              <p>Sun</p>
+                              <div class="sleep-bar" style="height: 70%"></div>
+                              <p>7h</p>
+                            </div>
+                          </div>
+                          <div class="sleep-target-line"></div>
+                        </div>
+                        <p class="sleep-average">Weekly Average: <strong>7.6 hours</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-tracking">
+            <div class="activity-header">
+              <h4>Activity Tracking</h4>
+              <button class="btn btn-primary"><i class="bi bi-plus-lg"></i> Log Activity</button>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="weekly-summary">
+                  <h5>Weekly Activity</h5>
+                  <div class="activity-stats">
+                    <div class="activity-stat">
+                      <div class="stat-icon"><i class="bi bi-stopwatch"></i></div>
+                      <div class="stat-info">
+                        <p class="stat-value">305 mins</p>
+                        <p class="stat-label">Total Time</p>
+                      </div>
+                    </div>
+                    <div class="activity-stat">
+                      <div class="stat-icon"><i class="bi bi-lightning"></i></div>
+                      <div class="stat-info">
+                        <p class="stat-value">1,250</p>
+                        <p class="stat-label">Calories</p>
+                      </div>
+                    </div>
+                    <div class="activity-stat">
+                      <div class="stat-icon"><i class="bi bi-geo-alt"></i></div>
+                      <div class="stat-info">
+                        <p class="stat-value">27.5 km</p>
+                        <p class="stat-label">Distance</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="activity-chart">
+                    <div class="activity-bars">
+                      <div class="activity-day">
+                        <p>Mon</p>
+                        <div class="activity-bar" style="height: 60%"></div>
+                        <p>45m</p>
+                      </div>
+                      <div class="activity-day">
+                        <p>Tue</p>
+                        <div class="activity-bar" style="height: 40%"></div>
+                        <p>30m</p>
+                      </div>
+                      <div class="activity-day">
+                        <p>Wed</p>
+                        <div class="activity-bar" style="height: 80%"></div>
+                        <p>60m</p>
+                      </div>
+                      <div class="activity-day">
+                        <p>Thu</p>
+                        <div class="activity-bar" style="height: 50%"></div>
+                        <p>38m</p>
+                      </div>
+                      <div class="activity-day">
+                        <p>Fri</p>
+                        <div class="activity-bar" style="height: 60%"></div>
+                        <p>45m</p>
+                      </div>
+                      <div class="activity-day active">
+                        <p>Sat</p>
+                        <div class="activity-bar" style="height: 93%"></div>
+                        <p>70m</p>
+                      </div>
+                      <div class="activity-day">
+                        <p>Sun</p>
+                        <div class="activity-bar" style="height: 20%"></div>
+                        <p>15m</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="recent-activities">
+                  <h5>Recent Activities</h5>
+                  <div class="activity-list">
+                    <div class="activity-list-item">
+                      <div class="activity-list-icon running"><i class="bi bi-stopwatch"></i></div>
+                      <div class="activity-list-details">
+                        <h6>Morning Run</h6>
+                        <p class="activity-list-meta">Today, 7:30 AM · 30 minutes · 5 km</p>
+                        <div class="activity-list-stats">
+                          <span><i class="bi bi-lightning"></i> 320 cal</span>
+                          <span><i class="bi bi-speedometer2"></i> 6:00 min/km</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="activity-list-item">
+                      <div class="activity-list-icon cycling"><i class="bi bi-bicycle"></i></div>
+                      <div class="activity-list-details">
+                        <h6>Evening Cycling</h6>
+                        <p class="activity-list-meta">Yesterday, 6:15 PM · 45 minutes · 12 km</p>
+                        <div class="activity-list-stats">
+                          <span><i class="bi bi-lightning"></i> 410 cal</span>
+                          <span><i class="bi bi-speedometer2"></i> 16 km/h</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="activity-list-item">
+                      <div class="activity-list-icon gym"><i class="bi bi-trophy"></i></div>
+                      <div class="activity-list-details">
+                        <h6>Gym Workout</h6>
+                        <p class="activity-list-meta">May 23, 5:30 PM · 60 minutes</p>
+                        <div class="activity-list-stats">
+                          <span><i class="bi bi-lightning"></i> 450 cal</span>
+                          <span><i class="bi bi-award"></i> Strength Training</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="activity-list-item">
+                      <div class="activity-list-icon yoga"><i class="bi bi-heart"></i></div>
+                      <div class="activity-list-details">
+                        <h6>Yoga Session</h6>
+                        <p class="activity-list-meta">May 22, 7:00 AM · 40 minutes</p>
+                        <div class="activity-list-stats">
+                          <span><i class="bi bi-lightning"></i> 180 cal</span>
+                          <span><i class="bi bi-award"></i> Flexibility</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nutrition-section">
+            <div class="nutrition-header">
+              <h4>Nutrition Tracking</h4>
+              <button class="btn btn-primary"><i class="bi bi-plus-lg"></i> Log Meal</button>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="calories-card">
+                  <h5>Daily Calories</h5>
+                  <div class="calorie-meter">
+                    <div class="calorie-display">
+                      <div class="calorie-value">1,450</div>
+                      <div class="calorie-target">/ 2,100</div>
+                    </div>
+                    <div class="calorie-progress">
+                      <div class="progress-ring">
+                        <circle class="progress-ring-circle" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calorie-breakdown">
+                    <div class="breakdown-item">
+                      <span class="breakdown-label">Carbs</span>
+                      <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <span class="breakdown-value">180g</span>
+                    </div>
+                    <div class="breakdown-item">
+                      <span class="breakdown-label">Protein</span>
+                      <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <span class="breakdown-value">90g</span>
+                    </div>
+                    <div class="breakdown-item">
+                      <span class="breakdown-label">Fat</span>
+                      <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <span class="breakdown-value">45g</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="meals-log">
+                  <h5>Today's Meals</h5>
+                  <div class="meal-items">
+                    <div class="meal-item">
+                      <div class="meal-icon breakfast"><i class="bi bi-sunrise"></i></div>
+                      <div class="meal-details">
+                        <div class="meal-header">
+                          <h6>Breakfast</h6>
+                          <span>7:30 AM · 420 cal</span>
+                        </div>
+                        <p>Avocado toast with eggs, orange juice</p>
+                        <div class="meal-nutrients">
+                          <span>Carbs: 45g</span>
+                          <span>Protein: 20g</span>
+                          <span>Fat: 18g</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="meal-item">
+                      <div class="meal-icon lunch"><i class="bi bi-sun"></i></div>
+                      <div class="meal-details">
+                        <div class="meal-header">
+                          <h6>Lunch</h6>
+                          <span>12:15 PM · 650 cal</span>
+                        </div>
+                        <p>Grilled chicken salad, whole grain bread, green tea</p>
+                        <div class="meal-nutrients">
+                          <span>Carbs: 75g</span>
+                          <span>Protein: 40g</span>
+                          <span>Fat: 15g</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="meal-item">
+                      <div class="meal-icon snack"><i class="bi bi-apple"></i></div>
+                      <div class="meal-details">
+                        <div class="meal-header">
+                          <h6>Snack</h6>
+                          <span>3:30 PM · 180 cal</span>
+                        </div>
+                        <p>Greek yogurt with berries and honey</p>
+                        <div class="meal-nutrients">
+                          <span>Carbs: 25g</span>
+                          <span>Protein: 12g</span>
+                          <span>Fat: 5g</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="meal-item">
+                      <div class="meal-icon dinner"><i class="bi bi-moon"></i></div>
+                      <div class="meal-details">
+                        <div class="meal-header">
+                          <h6>Dinner</h6>
+                          <span>7:00 PM · 580 cal</span>
+                        </div>
+                        <p>Salmon with quinoa and steamed vegetables</p>
+                        <div class="meal-nutrients">
+                          <span>Carbs: 60g</span>
+                          <span>Protein: 35g</span>
+                          <span>Fat: 18g</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settings Page -->
+        <div id="settings" class="page">
+          <h2 class="page-title">Settings</h2>
+          <p class="page-subtitle">Customize your LifeSync experience.</p>
+          
+          <div class="settings-container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="settings-sidebar">
+                  <div class="settings-nav">
+                    <div class="settings-nav-item active" data-settings="profile">
+                      <i class="bi bi-person-circle"></i>
+                      <span>Profile</span>
+                    </div>
+                    <div class="settings-nav-item" data-settings="appearance">
+                      <i class="bi bi-palette"></i>
+                      <span>Appearance</span>
+                    </div>
+                    <div class="settings-nav-item" data-settings="notifications">
+                      <i class="bi bi-bell"></i>
+                      <span>Notifications</span>
+                    </div>
+                    <div class="settings-nav-item" data-settings="privacy">
+                      <i class="bi bi-shield-lock"></i>
+                      <span>Privacy</span>
+                    </div>
+                    <div class="settings-nav-item" data-settings="backup">
+                      <i class="bi bi-cloud-arrow-up"></i>
+                      <span>Backup & Sync</span>
+                    </div>
+                    <div class="settings-nav-item" data-settings="about">
+                      <i class="bi bi-info-circle"></i>
+                      <span>About</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-9">
+                <div class="settings-content">
+                  <!-- Profile Settings -->
+                  <div id="profile-settings" class="settings-section active">
+                    <h4>Profile Settings</h4>
+                    <div class="profile-settings-form">
+                      <div class="profile-picture-section">
+                        <div class="current-picture">
+                          <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profile Picture">
+                        </div>
+                        <div class="picture-actions">
+                          <button class="btn btn-primary">Change Picture</button>
+                          <button class="btn btn-outline-danger">Remove</button>
+                        </div>
+                      </div>
+                      
+                      <div class="personal-info-form">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label for="fullName" class="form-label">Full Name</label>
+                              <input type="text" class="form-control" id="fullName" value="Alex Johnson">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label for="username" class="form-label">Username</label>
+                              <input type="text" class="form-control" id="username" value="alexj">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="email" value="alex.johnson@example.com">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label for="phone" class="form-label">Phone</label>
+                              <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label for="birthdate" class="form-label">Birthdate</label>
+                              <input type="date" class="form-control" id="birthdate" value="1995-08-12">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label for="gender" class="form-label">Gender</label>
+                              <select class="form-select" id="gender">
+                                <option value="male" selected>Male</option>
+                                <option value="female">Female</option>
+                                <option value="nonbinary">Non-binary</option>
+                                <option value="other">Other</option>
+                                <option value="prefer">Prefer not to say</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                          <label for="bio" class="form-label">Bio</label>
+                          <textarea class="form-control" id="bio" rows="3">Product designer with a passion for fitness and photography. Constantly seeking new adventures and creative challenges.</textarea>
+                        </div>
+                        
+                        <button class="btn btn-primary">Save Changes</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Appearance Settings -->
+                  <div id="appearance-settings" class="settings-section">
+                    <h4>Appearance Settings</h4>
+                    <div class="appearance-options">
+                      <div class="theme-selection">
+                        <h5>Theme</h5>
+                        <div class="theme-options">
+                          <div class="theme-option active">
+                            <div class="theme-preview light-theme"></div>
+                            <span>Light</span>
+                          </div>
+                          <div class="theme-option">
+                            <div class="theme-preview dark-theme"></div>
+                            <span>Dark</span>
+                          </div>
+                          <div class="theme-option">
+                            <div class="theme-preview system-theme"></div>
+                            <span>System</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="color-scheme">
+                        <h5>Color Scheme</h5>
+                        <div class="color-options">
+                          <div class="color-option active" style="--color: #7C5CFF;"></div>
+                          <div class="color-option" style="--color: #FF5C8D;"></div>
+                          <div class="color-option" style="--color: #5CC2FF;"></div>
+                          <div class="color-option" style="--color: #5CFF8F;"></div>
+                          <div class="color-option" style="--color: #FFBE5C;"></div>
+                        </div>
+                      </div>
+                      
+                      <div class="font-size">
+                        <h5>Font Size</h5>
+                        <div class="form-range-container">
+                          <span class="range-label">A</span>
+                          <input type="range" class="form-range" min="0" max="4" step="1" value="2" id="fontSizeRange">
+                          <span class="range-label">A</span>
+                        </div>
+                      </div>
+                      
+                      <div class="layout-options">
+                        <h5>Layout</h5>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="compactMode">
+                          <label class="form-check-label" for="compactMode">
+                            Compact Mode
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="reducedAnimations">
+                          <label class="form-check-label" for="reducedAnimations">
+                            Reduced Animations
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <button class="btn btn-primary">Save Preferences</button>
+                    </div>
+                  </div>
+                  
+                  <!-- Other settings sections would go here -->
+                  <div id="notifications-settings" class="settings-section">
+                    <h4>Notification Settings</h4>
+                    <!-- Notification settings content -->
+                  </div>
+                  
+                  <div id="privacy-settings" class="settings-section">
+                    <h4>Privacy Settings</h4>
+                    <!-- Privacy settings content -->
+                  </div>
+                  
+                  <div id="backup-settings" class="settings-section">
+                    <h4>Backup & Sync</h4>
+                    <!-- Backup settings content -->
+                  </div>
+                  
+                  <div id="about-settings" class="settings-section">
+                    <h4>About LifeSync</h4>
+                    <!-- About content -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Floating Action Button -->
+    <button id="fab" class="floating-action-button">
+      <i class="bi bi-plus"></i>
+    </button>
+
+    <!-- Bootstrap 5.3 JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/diary.js"></script>
+    <script src="js/agenda.js"></script>
+    <script src="js/finance.js"></script>
+    <script src="js/health.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+</html>
